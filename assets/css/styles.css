@@ -25,7 +25,7 @@ body{
 .nav-toggle{display:none;background:transparent;border:0;font-size:1.2rem;cursor:pointer}
 
 /* Buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:0.45rem 0.8rem;border-radius:10px;border:1px solid transparent;background:transparent;cursor:pointer;transition:transform .14s ease, box-shadow .14s ease}
+.btn{display:inline-flex;text-decoration:none;align-items:center;justify-content:center;padding:0.45rem 0.8rem;border-radius:10px;border:1px solid transparent;background:transparent;cursor:pointer;transition:transform .14s ease, box-shadow .14s ease}
 .btn:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(37,99,235,0.08)}
 .btn.primary{background:var(--accent);color:white;box-shadow:0 6px 18px rgba(37,99,235,0.12)}
 .btn.ghost{background:transparent;border:1px solid rgba(15,23,42,0.06)}
