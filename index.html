@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Taskly — Smart To-Do App</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <h1 class="brand">Taskly</h1>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+        <a class="btn primary" href="todo.html">Get Started</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h2>Organize your day, one task at a time.</h2>
+          <p class="lead">Simple, fast, and responsive To-Do app to manage tasks. Works offline with Local Storage.</p>
+          <div class="hero-ctas">
+            <a href="todo.html" class="btn large primary">Start for Free</a>
+            <a href="#features" class="btn large ghost">See Features</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <!-- Decorative SVG hero with subtle animation -->
+          <svg class="hero-svg" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" role="img">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1">
+                <stop offset="0" stop-color="#2563eb"/>
+                <stop offset="1" stop-color="#06b6d4"/>
+              </linearGradient>
+              <filter id="blur"><feGaussianBlur stdDeviation="10" /></filter>
+            </defs>
+            <rect x="0" y="0" width="100%" height="100%" rx="20" fill="url(#g1)" opacity="0.12" />
+            <g transform="translate(40,40)">
+              <rect x="0" y="0" width="240" height="320" rx="16" fill="#fff" stroke="#e6eefc" />
+              <g transform="translate(18,22)" class="mock-tasks">
+                <rect x="0" y="0" width="200" height="20" rx="6" fill="#f3f7ff" />
+                <rect x="0" y="36" width="160" height="20" rx="6" fill="#f3f7ff" />
+                <rect x="0" y="72" width="180" height="20" rx="6" fill="#f3f7ff" />
+                <rect x="0" y="108" width="120" height="20" rx="6" fill="#f3f7ff" />
+              </g>
+              <circle cx="320" cy="80" r="60" fill="url(#g1)" opacity="0.18" filter="url(#blur)" />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="container">
+        <h3>Features</h3>
+        <div class="grid features-grid">
+          <div class="card">
+            <h4>Manage Tasks</h4>
+            <p>Add, edit, delete tasks and mark them complete with smooth animations.</p>
+          </div>
+          <div class="card">
+            <h4>Filters & Sort</h4>
+            <p>Quickly view completed or pending tasks. Modern chip-style filters.</p>
+          </div>
+          <div class="card">
+            <h4>Local Storage</h4>
+            <p>Your tasks are saved in the browser — no backend needed.</p>
+          </div>
+          <div class="card">
+            <h4>Responsive Design</h4>
+            <p>Looks great on phones, tablets and desktops with media queries.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+      <div class="container">
+        <h3>What people say</h3>
+        <div class="grid test-grid">
+          <blockquote class="quote">"Taskly helped me finish assignments on time — so simple and clean."<cite>— Priya</cite></blockquote>
+          <blockquote class="quote">"I love the lightweight UI and the offline support."<cite>— Rohit</cite></blockquote>
+          <blockquote class="quote">"Perfect for my daily routine."<cite>— Anaya</cite></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="cta">
+      <div class="container cta-inner">
+        <h3>Ready to be more productive?</h3>
+        <p>Try Taskly now — start creating tasks in seconds.</p>
+        <a href="todo.html" class="btn primary large">Get Started</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Taskly · Enhanced — Built with HTML, CSS, JavaScript</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+  <script>
+    // mobile nav toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    toggle && toggle.addEventListener('click', ()=> navLinks.classList.toggle('open'));
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
